@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<appender name="javaecomoutdir" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>
+				%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} -
+				%msg%n
+			</Pattern>
+		</layout>
+	</appender>
+
+	<logger name="net.eyoel.javaecom" level="debug" additivity="false">
+		<appender-ref ref="javaecomoutdir" />
+	</logger>
+
+	<root level="error">
+		<appender-ref ref="javaecomoutdir" />
+	</root>
+
+</configuration>
