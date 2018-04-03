@@ -163,6 +163,7 @@ var Layout = function () {
             }
         });
     }
+    
     var handleSubMenuExt = function() {
         $(".header-navigation .dropdown").on("hover", function() {
             if ($(this).children(".header-navigation-content-ext").show()) {

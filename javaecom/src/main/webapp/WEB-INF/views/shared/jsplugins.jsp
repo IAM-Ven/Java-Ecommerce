@@ -1,8 +1,9 @@
 <!-- BEGIN CORE PLUGINS (REQUIRED FOR ALL PAGES) -->
 
+
+<script src="${plugins}/jquery.min.js" type="text/javascript"></script>
 <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"
 	type="text/javascript"></script>
-<script src="${plugins}/jquery.min.js" type="text/javascript"></script>
 <script src="${plugins}/jquery-migrate.min.js" type="text/javascript"></script>
 <script src="${plugins}/bootstrap/js/bootstrap.min.js"
 	type="text/javascript"></script>
@@ -24,7 +25,6 @@
 <!-- Quantity -->
 <script src="http://maps.google.com/maps/api/js?sensor=true"
 	type="text/javascript"></script>
-<script src="${corporate}/scripts/layout.js" type="text/javascript"></script>
 <script src="${pages}/scripts/bs-carousel.js" type="text/javascript"></script>
 <script src="${plugins}/uniform/jquery.uniform.min.js"
 	type="text/javascript"></script>
@@ -35,6 +35,7 @@
 
 <script src="${plugins}/rateit/src/jquery.rateit.js"
 	type="text/javascript"></script>
+<script src="${corporate}/scripts/layout.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 	jQuery(document).ready(function() {

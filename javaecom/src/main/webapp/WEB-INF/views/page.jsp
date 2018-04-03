@@ -11,12 +11,9 @@
 		<div class="container">
 			<a class="site-logo" href="${contextRoot}/javaecom/home"><img
 				src="${corporate}/img/logos/logo-shop-red.png" width="48px"
-				height="32px" alt="Metronic Shop UI">
-			</a> 
-			<a
+				height="32px" alt="Metronic Shop UI"> </a> <a
 				href="javascript:void(0);" class="mobi-toggler"><i
-				class="fa fa-bars"></i> 
-			</a>
+				class="fa fa-bars"></i> </a>
 
 			<!-- CART ICON -->
 			<%@include file="./shared/carticon.jsp"%>
@@ -40,13 +37,12 @@
 				<!-- NEW ARRIVAL -->
 				<%@include file="newarrival.jsp"%>
 
-				<!-- SIDEBAR & POPULAR -->
+				<!-- POPULAR -->
 				<div class="row margin-bottom-40 ">
-					<%@include file="sidebarmenu.jsp"%>
 					<%@include file="popular.jsp"%>
 				</div>
 
-				<!-- SUMMER & SLIDER -->
+				<!-- SUMMER & SLIDER-RIGHT -->
 				<div class="row margin-bottom-35 ">
 					<%@include file="summer.jsp"%>
 					<%@include file="btmrightslider.jsp"%>
@@ -54,17 +50,22 @@
 			</div>
 		</div>
 	</c:if>
-	
+
 	<c:if test="${loginactive ==true}">
 		<%@include file="./account/login.jsp"%>
 	</c:if>
 	<c:if test="${accountactive==true}">
 		<%@include file="./account/account.jsp"%>
 	</c:if>
-	
+
 	<c:if test="${checkoutactive==true}">
 		<%@include file="./products/checkout.jsp"%>
 	</c:if>
+	<c:if
+		test="${allcatsproductsactive==true || onecatproductsactive==true}">
+		<%@include file="./products/productslist.jsp"%>
+	</c:if>
+
 
 	<!-- -----------------------------Display Inside Changes------------------------------------------------------- -->
 

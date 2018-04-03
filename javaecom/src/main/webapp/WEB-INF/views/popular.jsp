@@ -1,5 +1,5 @@
 <!-- BEGIN CONTENT -->
-<div class="col-md-9 col-sm-8">
+<div class="col-md-12">
 	<h2>Popular</h2>
 	<div class="owl-carousel owl-carousel3">
 		<div>

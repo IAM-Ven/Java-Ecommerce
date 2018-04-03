@@ -3,8 +3,6 @@
 	<div class="container">
 		<!-- BEGIN SIDEBAR & CONTENT -->
 		<div class="row margin-bottom-40">
-			<%@include file="../sidebarmenu.jsp"%>
-
 			<!-- BEGIN CONTENT -->
 			<div class="col-md-12 col-sm-12">
 				<h1>Shopping cart</h1>

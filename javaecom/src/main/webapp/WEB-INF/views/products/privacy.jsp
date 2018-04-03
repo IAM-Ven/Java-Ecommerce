@@ -5,10 +5,7 @@
 			<li><a href="">Store</a></li>
 			<li class="active">Privacy Policy</li>
 		</ul>
-
-		<!-- BEGIN SIDEBAR -->
-		<%@include file="../sidebarmenu.jsp"%>
-
+		
 		<!-- BEGIN CONTENT -->
 		<div class="col-md-9 col-sm-9">
 			<h1>Privacy Policy</h1>

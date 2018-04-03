@@ -5,9 +5,6 @@
 			<li><a href="">Store</a></li>
 			<li class="active">Cool green dress with red bell</li>
 		</ul>
-		<!-- BEGIN SIDEBAR -->
-		<%@include file="../sidebarmenu.jsp"%>
-
 		<!-- BEGIN CONTENT -->
 		<div class="col-md-9 col-sm-7">
 			<div class="product-page">

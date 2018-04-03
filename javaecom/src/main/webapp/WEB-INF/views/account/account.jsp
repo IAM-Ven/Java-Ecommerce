@@ -7,9 +7,6 @@
 		</ul>
 		<!-- BEGIN SIDEBAR & CONTENT -->
 		<div class="row margin-bottom-40">
-			<!-- BEGIN SIDEBAR -->
-			<%@include file="../sidebarmenu.jsp"%>
-
 			<!-- BEGIN CONTENT -->
 			<div class="col-md-9 col-sm-7">
 				<h1>My Account Page</h1>

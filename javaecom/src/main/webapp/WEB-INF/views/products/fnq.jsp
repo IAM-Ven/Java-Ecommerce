@@ -6,10 +6,7 @@
 			<li class="active">Frequently Asked Questions</li>
 		</ul>
 		<!-- BEGIN SIDEBAR & CONTENT -->
-		<div class="row margin-bottom-40">
-			<!-- BEGIN SIDEBAR -->
-			<%@include file="../sidebarmenu.jsp"%>
-			
+		<div class="row margin-bottom-40">			
 			<!-- BEGIN CONTENT -->
 			<div class="col-md-9 col-sm-9">
 				<h1>Frequently Asked Questions</h1>
