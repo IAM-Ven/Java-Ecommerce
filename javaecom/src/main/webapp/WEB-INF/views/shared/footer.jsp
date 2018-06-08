@@ -36,25 +36,26 @@
 			</div>
 			<!-- END INFO BLOCK -->
 
-			<!-- BEGIN TWITTER BLOCK -->
+			<!-- BEGIN BOTTOM INFO BLOCK -->
 			<div class="col-md-3 col-sm-6 pre-footer-col">
-				<h2 class="margin-bottom-0">Latest Tweets</h2>
-				<a class="twitter-timeline" href="https://twitter.com/twitterapi"
-					data-tweet-limit="2" data-theme="dark" data-link-color="#57C8EB"
-					data-widget-id="455411516829736961"
-					data-chrome="noheader nofooter noscrollbar noborders transparent">Loading
-					tweets by @houshop...</a>
+				<h2>Policy Info</h2>
+				<ul class="list-unstyled">
+					<li><i class="fa fa-angle-right"></i> <a href="javascript:;">Policy</a></li>
+					<li><i class="fa fa-angle-right"></i> <a href="javascript:;">Terms
+							of use</a></li>
+					<li><i class="fa fa-angle-right"></i> <a href="javascript:;">About
+							us</a></li>
+				</ul>
 			</div>
-			<!-- END TWITTER BLOCK -->
+			<!-- END INFO BLOCK -->
 
 			<!-- BEGIN BOTTOM CONTACTS -->
 			<div class="col-md-3 col-sm-6 pre-footer-col">
 				<h2>Our Contacts</h2>
 				<address class="margin-bottom-40">
-					35, Lorem Lis Street, Park Ave<br> California, US<br>
-					Phone: 300 323 3456<br> Fax: 300 323 1456<br> Email: <a
-						href="mailto:info@metronic.com">info@metronic.com</a><br>
-					Skype: <a href="skype:metronic">metronic</a>
+					12345, Some random Street, Okay Ave<br> Virginia, US<br>
+					Phone: 1-800-939-6372<br> Fax: 234-333-4334<br> Email: <a
+						href="mailto:derejeyoel@gmail.com">derejeyoel@gmail.com</a><br>
 				</address>
 			</div>
 			<!-- END BOTTOM CONTACTS -->
@@ -131,7 +132,7 @@
 			<!-- BEGIN POWERED -->
 			<div class="col-md-4 col-sm-4 text-right">
 				<p class="powered">
-					Theme by: <a href="http://www.keenthemes.com/">KeenThemes.com</a>
+					Credit for theme - <a href="http://www.keenthemes.com/">KeenThemes.com</a>
 				</p>
 			</div>
 			<!-- END POWERED -->

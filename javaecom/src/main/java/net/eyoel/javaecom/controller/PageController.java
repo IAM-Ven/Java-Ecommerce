@@ -76,7 +76,7 @@ public class PageController {
 		clthcat = storeCategoryDao.getStoreCategoryId(id);
 
 		mv.addObject("title", clthcat.getName() + " clothes");
-		mv.addObject("categories", storeCategoryDao.getStoreCategoryList());
+		mv.addObject	("categories", storeCategoryDao.getStoreCategoryList());
 		mv.addObject("category", clthcat);
 		mv.addObject("onecatproductsactive", true);
 		return mv;

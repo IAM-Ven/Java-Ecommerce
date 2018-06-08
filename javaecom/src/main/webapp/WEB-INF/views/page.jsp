@@ -69,9 +69,6 @@
 
 	<!-- -----------------------------Display Inside Changes------------------------------------------------------- -->
 
-	<!-- BRANDS -->
-	<%@include file="./shared/brand.jsp"%>
-
 	<!-- FREE SHIPPING -->
 	<%@include file="./shared/freeshipping.jsp"%>
 
