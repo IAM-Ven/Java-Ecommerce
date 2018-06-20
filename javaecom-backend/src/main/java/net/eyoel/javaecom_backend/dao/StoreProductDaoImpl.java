@@ -11,7 +11,7 @@ import net.eyoel.javaecom_backend.dto.StoreProduct;
 
 @Repository("productDao")
 @Transactional
-public class StoreProductImpl implements StoreProductDao {
+public class StoreProductDaoImpl implements StoreProductDao {
 
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -87,11 +87,11 @@ public class StoreProductImpl implements StoreProductDao {
 
 	@Override
 	// GET LIST OF ALL ACTIVE PRODUCTS BY CATEGORY ID
-	public List<StoreProduct> getListOfAllActiveProductsByCategory(int categoryId) {
-		String activeProductsByIdDb = "from StoreProduct where active = :active and categoryId = :category_id";
+	public List<StoreProduct> getListOfAllActiveProductsByCategory(int category_id) {
+		String activeProductsByIdDb = "from StoreProduct where active = :active and category_id = :category_id";
 
 		return this.sessionFactory.getCurrentSession().createQuery(activeProductsByIdDb, StoreProduct.class)
-				.setParameter("active", true).setParameter("category_id", categoryId).getResultList();
+				.setParameter("active", true).setParameter("category_id", category_id).getResultList();
 	}
 
 	@Override

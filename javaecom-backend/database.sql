@@ -56,7 +56,7 @@ CREATE TABLE StoreProduct (
 	views INT DEFAULT 0,
 	
 	CONSTRAINT product_id PRIMARY KEY (id),
- 	CONSTRAINT product_category_id FOREIGN KEY (category_id) REFERENCES StoreCategory (id),
+ 	CONSTRAINT product_category_id FOREIGN KEY (category_id) REFERENCES StoreCategory(id),
 	CONSTRAINT product_user_id FOREIGN KEY (user_id) REFERENCES User(id),	
 );	
 
