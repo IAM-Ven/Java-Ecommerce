@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import net.eyoel.javaecom_backend.dao.StoreCategoryDao;
+import net.eyoel.javaecom_backend.dao.StoreProductDao;
 import net.eyoel.javaecom_backend.dto.StoreCategory;
 
 @Controller
@@ -14,6 +15,8 @@ public class PageController {
 
 	@Autowired // this instantiates the Dao interface class & also getters and setters
 	private StoreCategoryDao storeCategoryDao = null;
+	@Autowired
+	private StoreProductDao storeProductDao = null;
 
 	@RequestMapping(value = { "/", "/home" })
 	public ModelAndView index() {
@@ -76,9 +79,18 @@ public class PageController {
 		clthcat = storeCategoryDao.getStoreCategoryId(id);
 
 		mv.addObject("title", clthcat.getName() + " clothes");
-		mv.addObject	("categories", storeCategoryDao.getStoreCategoryList());
+		mv.addObject("categories", storeCategoryDao.getStoreCategoryList());
 		mv.addObject("category", clthcat);
 		mv.addObject("onecatproductsactive", true);
+		return mv;
+	}
+	
+	//Products (Put in seperate file)
+	
+	@RequestMapping(value = { "/something" })
+	public ModelAndView product() {
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("product", storeProductDao.getListOfAllProducts());
 		return mv;
 	}
 
