@@ -12,7 +12,7 @@ public class StoreProduct {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private String code, name, brand, info;
+	private String code, name, brand, info, image;
 	private double price;
 	private int quantity, views, purchases, category_id, user_id;
 	private boolean active, summer, winter;
@@ -25,6 +25,14 @@ public class StoreProduct {
 	// Setters and getters
 	public int getId() {
 		return id;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
 	}
 
 	public void setId(int id) {

@@ -61,24 +61,27 @@
 
 				<!-- BEGIN PRODUCT LIST -->
 				<div class="row product-list">
-					<c:forEach items="${allproducts}" var="clothcats">
+					<c:forEach items="${products}" var="product">
 						<!-- PRODUCT ITEM START -->
 						<div class="col-md-4 col-sm-6 col-xs-12">
 							<div class="product-item">
 								<div class="pi-img-wrapper">
-									<img src="${pages}/img/products/model1.jpg"
+									<img src="${pages}/img/products/${product.getImage()}.jpg"
 										class="img-responsive" alt="Berry Lace Dress">
 									<div>
-										<a href="${pages}/img/products/model1.jpg"
+										<a href="${pages}/img/products/${product.getImage()}.jpg"
 											class="btn btn-default fancybox-button">Zoom</a> <a
 											href="#product-pop-up"
 											class="btn btn-default fancybox-fast-view">View</a>
 									</div>
 								</div>
 								<h3>
-									<a href="shop-item.html">${clothcats.getName()}</a>
+									<a href="shop-item.html">${product.getName()}</a>
 								</h3>
-								<div class="pi-price">$29.00</div>
+								<div>
+									<span>By: ${product.getBrand()}</span>
+								</div>
+								<div class="pi-price">$${String.format( "%.2f", product.getPrice())}</div>
 								<a href="javascript:;" class="btn btn-default add2cart">Add
 									to cart</a>
 							</div>
