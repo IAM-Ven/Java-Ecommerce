@@ -25,6 +25,11 @@ public class PageController {
 		// passing list of cloth category objects
 		mv.addObject("clothCategories", storeCategoryDao.getStoreCategoryList());
 		mv.addObject("categories", storeCategoryDao.getStoreCategoryList());
+		
+		
+		//Summer
+		mv.addObject("summer", storeProductDao.getListOfSummerActiveProducts(6, true));
+		//Home page is active
 		mv.addObject("homeactive", true);
 		return mv;
 	}

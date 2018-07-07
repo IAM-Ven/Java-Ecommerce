@@ -26,7 +26,6 @@
 
 
 	<!-- -----------------------------Display Inside Changes------------------------------------------------------- -->
-
 	<c:if test="${homeactive ==true}">
 		<!-- SLIDER -->
 		<%@include file="slider.jsp"%>
