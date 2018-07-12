@@ -33,12 +33,12 @@
 		<div class="main">
 			<div class="container">
 
-				<!-- NEW ARRIVAL -->
-				<%@include file="newarrival.jsp"%>
+				<!-- Popular -->
+				<%@include file="popular.jsp"%>
 
-				<!-- POPULAR -->
+				<!-- Winter -->
 				<div class="row margin-bottom-40 ">
-					<%@include file="popular.jsp"%>
+					<%@include file="winter.jsp"%>
 				</div>
 
 				<!-- SUMMER & SLIDER-RIGHT -->
@@ -49,6 +49,7 @@
 			</div>
 		</div>
 	</c:if>
+
 
 	<c:if test="${loginactive ==true}">
 		<%@include file="./account/login.jsp"%>
@@ -61,10 +62,13 @@
 		<%@include file="./products/checkout.jsp"%>
 	</c:if>
 	<c:if
-		test="${allcatsproductsactive==true || onecatproductsactive==true}">
+		test="${allcatsproductsactive==true}">
 		<%@include file="./products/productslist.jsp"%>
 	</c:if>
-
+	<c:if
+		test="${onecatproductsactive ==true}">
+		<%@include file="./shared/category.jsp"%>
+	</c:if>
 
 	<!-- -----------------------------Display Inside Changes------------------------------------------------------- -->
 

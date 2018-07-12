@@ -25,12 +25,19 @@ public class PageController {
 		// passing list of cloth category objects
 		mv.addObject("clothCategories", storeCategoryDao.getStoreCategoryList());
 		mv.addObject("categories", storeCategoryDao.getStoreCategoryList());
-		
-		
-		//Summer
+
+		// Summer
 		mv.addObject("summer", storeProductDao.getListOfSummerActiveProducts(6, true));
-		//Home page is active
+
+		// Winter
+		mv.addObject("winter", storeProductDao.getListOfWinterActiveProducts(6, true));
+
+		// Popular
+		mv.addObject("popular", storeProductDao.getListOfPopularActiveProducts(10));
+
+		// Home page is active
 		mv.addObject("homeactive", true);
+
 		return mv;
 	}
 
@@ -80,12 +87,13 @@ public class PageController {
 		// send id to back-end directly
 		// This bottom code is returning a ClothesCategory products based on id
 		clthcat = storeCategoryDao.getStoreCategoryId(id);
-		
+
 		mv.addObject("title", clthcat.getName() + " clothes");
 		mv.addObject("categories", storeCategoryDao.getStoreCategoryList());
 		mv.addObject("category", clthcat);
+		mv.addObject("cateProducts", storeProductDao.getListOfAllActiveProductsByCategory(id));
 		mv.addObject("onecatproductsactive", true);
-		
+
 		return mv;
 	}
 

@@ -63,19 +63,19 @@ CREATE TABLE StoreProduct (
 
 INSERT INTO StoreProduct (code, name, image, brand, info, price, quantity,summer,winter, active, category_id, user_id)
 VALUES ('HFYU323JHU7', 'Yellow Cut Shirt', 'p4','Hfud', 'These lightweight microfiber towels are an affordable option for all purpose wiping, cleaning and dusting. They can be laundered and reused many times. There are various color options for color coding cleaning tasks. These lightweight low pile microfiber towels work especially well on glass.
-', 789, 75,true,false, true, 1, 1 );
+', 789, 75,false,false, true, 1, 1 );
 
 INSERT INTO StoreProduct (code, name, image, brand, info, price, quantity,summer,winter, active, category_id, user_id)
 VALUES ('JFKIEUO876H', 'Zebra Cross Stripe Dress', 'p5', 'IOI', 'These lightweight microfiber towels are an affordable option for all purpose wiping, cleaning and dusting. They can be laundered and reused many times. There are various color options for color coding cleaning tasks. These lightweight low pile microfiber towels work especially well on glass.
-', 34, 3, true,false,true, 2, 2 );
+', 34, 3, false,false,true, 2, 2 );
 
 INSERT INTO StoreProduct (code, name, image, brand, info, price, quantity,summer,winter, active, category_id, user_id)
 VALUES ('LKDFGHYJ901', 'Cotton Purple Dress','model1', 'Uido', 'These lightweight microfiber towels are an affordable option for all purpose wiping, cleaning and dusting. They can be laundered and reused many times. There are various color options for color coding cleaning tasks. These lightweight low pile microfiber towels work especially well on glass.
-', 123, 23, true,false,true, 3, 3 );
+', 123, 23, false,false,true, 3, 3 );
 
 INSERT INTO StoreProduct (code, name, image, brand, info, price, quantity, summer,winter,active, category_id, user_id)
 VALUES ('RTDYUHCNUDU', 'Workers Blue Cloth', 'model2', 'Podi', 'These lightweight microfiber towels are an affordable option for all purpose wiping, cleaning and dusting. They can be laundered and reused many times. There are various color options for color coding cleaning tasks. These lightweight low pile microfiber towels work especially well on glass.
-', 90, 9, true,false,true,1, 1 );
+', 90, 9, false,false,true,1, 1 );
 
 INSERT INTO StoreProduct (code, name, image, brand, info, price, quantity, summer,winter,active, category_id, user_id)
 VALUES ('LKIOUIJH232', 'Casual Women Attire', 'model3','FFF', 'These lightweight microfiber towels are an affordable option for all purpose wiping, cleaning and dusting. They can be laundered and reused many times. There are various color options for color coding cleaning tasks. These lightweight low pile microfiber towels work especially well on glass.
@@ -91,27 +91,27 @@ VALUES ('HJDFDRETGS2', 'Colorful Stripe Designed Dress', 'model5', 'Hfud', 'Thes
 
 INSERT INTO StoreProduct (code, name, image, brand, info, price, quantity,summer,winter, active, category_id, user_id)
 VALUES ('NHDBCKIOP87', 'Pink Cotton Shirt', 'model6', 'Jdyi', 'These lightweight microfiber towels are an affordable option for all purpose wiping, cleaning and dusting. They can be laundered and reused many times. There are various color options for color coding cleaning tasks. These lightweight low pile microfiber towels work especially well on glass.
-', 433, 898, true,true,true, 2, 2 );
+', 433, 898, false,true,true, 2, 2 );
 
 INSERT INTO StoreProduct (code, name, image, brand, info, price, quantity,summer,winter, active, category_id, user_id)
 VALUES ('90KIOLWED12', 'Full Yellow Shirt', 'model7', 'Uido', 'These lightweight microfiber towels are an affordable option for all purpose wiping, cleaning and dusting. They can be laundered and reused many times. There are various color options for color coding cleaning tasks. These lightweight low pile microfiber towels work especially well on glass.
-', 65, 90, true,true,true, 3, 3 );
+', 65, 90, false,true,true, 3, 3 );
 
 INSERT INTO StoreProduct (code, name, image, brand, info, price, quantity, summer,winter,active, category_id, user_id)
 VALUES ('QAZWXS12WQS', 'Purple Shirt', 'p1', 'Adidas', 'These lightweight microfiber towels are an affordable option for all purpose wiping, cleaning and dusting. They can be laundered and reused many times. There are various color options for color coding cleaning tasks. These lightweight low pile microfiber towels work especially well on glass.
-', 44, 56, true,true,false,1, 1 );
+', 44, 56, false,true,false,1, 1 );
 
 INSERT INTO StoreProduct (code, name, image, brand, info, price, quantity, summer,winter,active, category_id, user_id)
 VALUES ('QWEASDZXSR1', 'Professional Men Suit', 'p2', 'Nike', 'These lightweight microfiber towels are an affordable option for all purpose wiping, cleaning and dusting. They can be laundered and reused many times. There are various color options for color coding cleaning tasks. These lightweight low pile microfiber towels work especially well on glass.
-', 12, 12, true,true,true, 2, 2 );
+', 12, 12, false,true,true, 2, 2 );
 
 INSERT INTO StoreProduct (code, name, image, brand, info, price, quantity, summer,winter,active, category_id, user_id)
 VALUES ('IOWGSDCBX61', 'Women Gym Hoodi', 'p3', 'Jfud', 'These lightweight microfiber towels are an affordable option for all purpose wiping, cleaning and dusting. They can be laundered and reused many times. There are various color options for color coding cleaning tasks. These lightweight low pile microfiber towels work especially well on glass.
-', 32, 23, true,true,false, 3, 3 );
+', 32, 23, false,true,false, 3, 3 );
 
 INSERT INTO StoreProduct (code, name, image, brand, info, price, quantity,summer,winter, active, category_id, user_id)
 VALUES ('MKNJHVGGFCD', 'Yellow Cut Shirt', 'p4', 'Hfud', 'These lightweight microfiber towels are an affordable option for all purpose wiping, cleaning and dusting. They can be laundered and reused many times. There are various color options for color coding cleaning tasks. These lightweight low pile microfiber towels work especially well on glass.
-', 43, 323,true,false, true, 1, 1 );
+', 43, 323,false,false, true, 1, 1 );
 
 INSERT INTO StoreProduct (code, name, image, brand, info, price, quantity,summer,winter, active, category_id, user_id)
 VALUES ('IUDHSG2332D', 'Zebra Cross Stripe Dress', 'p5', 'Jdyi', 'These lightweight microfiber towels are an affordable option for all purpose wiping, cleaning and dusting. They can be laundered and reused many times. There are various color options for color coding cleaning tasks. These lightweight low pile microfiber towels work especially well on glass.
@@ -119,6 +119,22 @@ VALUES ('IUDHSG2332D', 'Zebra Cross Stripe Dress', 'p5', 'Jdyi', 'These lightwei
 
 INSERT INTO StoreProduct (code, name, image, brand, info, price, quantity, summer,winter,active, category_id, user_id)
 VALUES ('MKNJBHVGYU2', 'Colorful Stripe Designed Dress', 'model5', 'Podi', 'These lightweight microfiber towels are an affordable option for all purpose wiping, cleaning and dusting. They can be laundered and reused many times. There are various color options for color coding cleaning tasks. These lightweight low pile microfiber towels work especially well on glass.
+', 87, 65, false,false,true,3, 3 );
+
+INSERT INTO StoreProduct (code, name, image, brand, info, price, quantity, summer,winter,active, category_id, user_id)
+VALUES ('LMKJKHVGYU2', 'Summer Cloth 2018', 'k1', 'Podi', 'These lightweight microfiber towels are an affordable option for all purpose wiping, cleaning and dusting. They can be laundered and reused many times. There are various color options for color coding cleaning tasks. These lightweight low pile microfiber towels work especially well on glass.
+', 87, 65, true,false,true,1, 1 );
+
+INSERT INTO StoreProduct (code, name, image, brand, info, price, quantity, summer,winter,active, category_id, user_id)
+VALUES ('JGDSTWERVJ1', 'Summer Cloth 2018', 'k2', 'HHH', 'These lightweight microfiber towels are an affordable option for all purpose wiping, cleaning and dusting. They can be laundered and reused many times. There are various color options for color coding cleaning tasks. These lightweight low pile microfiber towels work especially well on glass.
+', 87, 65, true,false,true,2, 2);
+
+INSERT INTO StoreProduct (code, name, image, brand, info, price, quantity, summer,winter,active, category_id, user_id)
+VALUES ('HJUVFSAZXQW', 'Awesome Summer Cloth 2020', 'k3', 'DC', 'These lightweight microfiber towels are an affordable option for all purpose wiping, cleaning and dusting. They can be laundered and reused many times. There are various color options for color coding cleaning tasks. These lightweight low pile microfiber towels work especially well on glass.
 ', 87, 65, true,false,true,3, 3 );
+
+INSERT INTO StoreProduct (code, name, image, brand, info, price, quantity, summer,winter,active, category_id, user_id)
+VALUES ('BNCVFRTSWQD', 'Best Summer Cloth 2012', 'k4', 'DVM', 'These lightweight microfiber towels are an affordable option for all purpose wiping, cleaning and dusting. They can be laundered and reused many times. There are various color options for color coding cleaning tasks. These lightweight low pile microfiber towels work especially well on glass.
+', 87, 65, true,false,true,1, 2 );
 
 
