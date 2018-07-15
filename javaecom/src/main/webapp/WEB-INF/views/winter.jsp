@@ -16,7 +16,7 @@
 						</div>
 					</div>
 					<h3>
-						<a href="shop-item.html">Berry Lace Dress</a>
+						<a href="${contextRoot}/javaecom/product/${product.getId()}" >$${wntr.getName()}</a>
 					</h3>
 					<div class="pi-price">$${String.format( "%.2f",
 						wntr.getPrice())}</div>

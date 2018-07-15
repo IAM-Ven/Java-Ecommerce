@@ -47,6 +47,7 @@ public class PageController {
 		mv.addObject("title", "Login");
 		mv.addObject("categories", storeCategoryDao.getStoreCategoryList());
 		mv.addObject("loginactive", true);
+		
 		return mv;
 	}
 
@@ -93,7 +94,27 @@ public class PageController {
 		mv.addObject("category", clthcat);
 		mv.addObject("cateProducts", storeProductDao.getListOfAllActiveProductsByCategory(id));
 		mv.addObject("onecatproductsactive", true);
+		return mv;
+	}
 
+	// Get a single product
+
+	@RequestMapping(value = { "/product/{id}" })
+	public ModelAndView singleProduct(@PathVariable("id") int id) {
+				
+		ModelAndView mv = new ModelAndView("page");
+		StoreProduct product;
+		
+		product = storeProductDao.getStoreProduct(id);
+		product.setViews(product.getViews() + 1); // increament by 1 everytime someone sees it
+		//storeProductDao.updateProduct(product); // update the product after adding view # change
+		
+		mv.addObject("title", product.getName());
+		mv.addObject("product", product);
+		
+		System.out.println(product.getId());
+
+		mv.addObject("productactive", true);
 		return mv;
 	}
 

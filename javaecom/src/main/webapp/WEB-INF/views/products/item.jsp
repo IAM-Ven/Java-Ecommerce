@@ -343,4 +343,3 @@
 	</div>
 	<!-- END SIMILAR PRODUCTS -->
 </div>
-</div>

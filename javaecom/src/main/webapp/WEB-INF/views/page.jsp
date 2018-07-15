@@ -69,6 +69,9 @@
 		test="${onecatproductsactive ==true}">
 		<%@include file="./shared/category.jsp"%>
 	</c:if>
+	<c:if test="${productactive==true}">
+		<%@include file="./products/item.jsp"%>
+	</c:if>
 
 	<!-- -----------------------------Display Inside Changes------------------------------------------------------- -->
 
