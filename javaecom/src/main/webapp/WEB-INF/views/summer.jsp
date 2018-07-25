@@ -8,16 +8,16 @@
 
 					<div class="pi-img-wrapper">
 						<img src="${pages}/img/products/${smr.getImage()}.jpg"
-							class="img-responsive" alt="Berry Lace Dress">
+							class="img-responsive" alt="${smr.getName()}">
 						<div>
-							<a href="${pages}/img/products/${smr.getImage()}.jpg"
+							<a href="${contextRoot}/javaecom/product/${smr.getId()}"
 								class="btn btn-default fancybox-button">Zoom</a> <a
-								href="#product-pop-up"
+								href="smr"
 								class="btn btn-default fancybox-fast-view">View</a>
 						</div>
 					</div>
 					<h3>
-						<a href="shop-item.html">Berry Lace Dress</a>
+						<a href="${contextRoot}/javaecom/product/${smr.getId()}">${smr.getName()}</a>
 					</h3>
 					<div class="pi-price">$${String.format( "%.2f", smr.getPrice())}</div>
 					<a href="javascript:;" class="btn btn-default add2cart">Add to

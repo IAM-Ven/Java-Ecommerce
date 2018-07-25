@@ -1,49 +1,59 @@
 <div class="main">
 	<div class="container">
 		<ul class="breadcrumb">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="">Store</a></li>
-			<li class="active">Cool green dress with red bell</li>
+			<li><a href="${contextRoot}/javaecom/home">Home</a></li>
+			<li><a href="${contextRoot}/javaecom/category/all/products">Store</a></li>
+			<li class="active">${product.getName()}</li>
 		</ul>
 		<!-- BEGIN CONTENT -->
 		<div class="col-md-9 col-sm-7">
 			<div class="product-page">
 				<div class="row">
+					
+					
+					
 					<div class="col-md-6 col-sm-6">
 						<div class="product-main-image">
-							<img src="assets/pages/img/products/model7.jpg"
-								alt="Cool green dress with red bell" class="img-responsive"
-								data-BigImgsrc="assets/pages/img/products/model7.jpg">
+							<img src="${pages}/img/products/${product.getImage()}.jpg"
+								alt="${product.getName()}" class="img-responsive"
+								data-BigImgsrc="${pages}/img/products/${product.getImage()}.jpg">
 						</div>
+						
 						<div class="product-other-images">
-							<a href="assets/pages/img/products/model3.jpg"
+							<a href="${pages}/img/products/${product.getImage()}.jpg"
 								class="fancybox-button" rel="photos-lib"><img
 								alt="Berry Lace Dress"
-								src="assets/pages/img/products/model3.jpg"></a> <a
-								href="assets/pages/img/products/model4.jpg"
+								src="${pages}/img/products/${product.getImage()}.jpg"></a> <a
+								href="${pages}/img/products/${product.getImage()}.jpg"
 								class="fancybox-button" rel="photos-lib"><img
 								alt="Berry Lace Dress"
-								src="assets/pages/img/products/model4.jpg"></a> <a
-								href="assets/pages/img/products/model5.jpg"
+								src="${pages}/img/products/${product.getImage()}.jpg"></a> <a
+								href="${pages}/img/products/${product.getImage()}.jpg"
 								class="fancybox-button" rel="photos-lib"><img
 								alt="Berry Lace Dress"
-								src="assets/pages/img/products/model5.jpg"></a>
+								src="${pages}/img/products/${product.getImage()}.jpg"></a>
 						</div>
 					</div>
+					
+					
+					
+					
+					
 					<div class="col-md-6 col-sm-6">
-						<h1>Cool green dress with red bell</h1>
+						<h1>${product.getName()}</h1>
 						<div class="price-availability-block clearfix">
 							<div class="price">
-								<strong><span>$</span>47.00</strong> <em>$<span>62.00</span></em>
+								<strong><span>$</span>47.00</strong> 
+								<em>$<span>
+								$${String.format( "%.2f", smr.getPrice())}
+								</span></em>
 							</div>
 							<div class="availability">
 								Availability: <strong>In Stock</strong>
 							</div>
 						</div>
 						<div class="description">
-							<p>Lorem ipsum dolor ut sit ame dolore adipiscing elit, sed
-								nonumy nibh sed euismod laoreet dolore magna aliquarm erat
-								volutpat Nostrud duis molestie at dolore.</p>
+							<p>${product.getInfo()}</p>
 						</div>
 						<div class="product-page-options">
 							<div class="pull-left">
@@ -63,6 +73,7 @@
 								</select>
 							</div>
 						</div>
+						
 						<div class="product-page-cart">
 							<div class="product-quantity">
 								<input id="product-quantity" type="text" value="1" readonly
@@ -71,6 +82,13 @@
 							<button class="btn btn-primary" type="submit">Add to
 								cart</button>
 						</div>
+						
+						
+						
+						
+						
+						
+						
 						<div class="review">
 							<input type="range" value="4" step="0.25" id="backing4">
 							<div class="rateit" data-rateit-backingfld="#backing4"
@@ -219,10 +237,10 @@
 				<div>
 					<div class="product-item">
 						<div class="pi-img-wrapper">
-							<img src="assets/pages/img/products/k1.jpg"
+							<img src="${pages}/img/products/${product.getImage()}.jpg"
 								class="img-responsive" alt="Berry Lace Dress">
 							<div>
-								<a href="assets/pages/img/products/k1.jpg"
+								<a href="${pages}/img/products/${product.getImage()}.jpg"
 									class="btn btn-default fancybox-button">Zoom</a> <a
 									href="#product-pop-up"
 									class="btn btn-default fancybox-fast-view">View</a>
@@ -240,10 +258,10 @@
 				<div>
 					<div class="product-item">
 						<div class="pi-img-wrapper">
-							<img src="assets/pages/img/products/k2.jpg"
+							<img src="${pages}/img/products/${product.getImage()}.jpg"
 								class="img-responsive" alt="Berry Lace Dress">
 							<div>
-								<a href="assets/pages/img/products/k2.jpg"
+								<a href="${pages}/img/products/${product.getImage()}.jpg"
 									class="btn btn-default fancybox-button">Zoom</a> <a
 									href="#product-pop-up"
 									class="btn btn-default fancybox-fast-view">View</a>
@@ -260,10 +278,10 @@
 				<div>
 					<div class="product-item">
 						<div class="pi-img-wrapper">
-							<img src="assets/pages/img/products/k3.jpg"
+							<img src="${pages}/img/products/${product.getImage()}.jpg"
 								class="img-responsive" alt="Berry Lace Dress">
 							<div>
-								<a href="assets/pages/img/products/k3.jpg"
+								<a href="${pages}/img/products/${product.getImage()}.jpg"
 									class="btn btn-default fancybox-button">Zoom</a> <a
 									href="#product-pop-up"
 									class="btn btn-default fancybox-fast-view">View</a>
@@ -280,10 +298,10 @@
 				<div>
 					<div class="product-item">
 						<div class="pi-img-wrapper">
-							<img src="assets/pages/img/products/k4.jpg"
+							<img src="${pages}/img/products/${product.getImage()}.jpg"
 								class="img-responsive" alt="Berry Lace Dress">
 							<div>
-								<a href="assets/pages/img/products/k4.jpg"
+								<a href="${pages}/img/products/${product.getImage()}.jpg"
 									class="btn btn-default fancybox-button">Zoom</a> <a
 									href="#product-pop-up"
 									class="btn btn-default fancybox-fast-view">View</a>
@@ -301,10 +319,10 @@
 				<div>
 					<div class="product-item">
 						<div class="pi-img-wrapper">
-							<img src="assets/pages/img/products/k1.jpg"
+							<img src="${pages}/img/products/${product.getImage()}.jpg"
 								class="img-responsive" alt="Berry Lace Dress">
 							<div>
-								<a href="assets/pages/img/products/k1.jpg"
+								<a href="${pages}/img/products/${product.getImage()}.jpg"
 									class="btn btn-default fancybox-button">Zoom</a> <a
 									href="#product-pop-up"
 									class="btn btn-default fancybox-fast-view">View</a>
@@ -321,10 +339,10 @@
 				<div>
 					<div class="product-item">
 						<div class="pi-img-wrapper">
-							<img src="assets/pages/img/products/k2.jpg"
+							<img src="${pages}/img/products/${product.getImage()}.jpg"
 								class="img-responsive" alt="Berry Lace Dress">
 							<div>
-								<a href="assets/pages/img/products/k2.jpg"
+								<a href="${pages}/img/products/${product.getImage()}.jpg"
 									class="btn btn-default fancybox-button">Zoom</a> <a
 									href="#product-pop-up"
 									class="btn btn-default fancybox-fast-view">View</a>

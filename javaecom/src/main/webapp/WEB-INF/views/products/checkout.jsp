@@ -371,7 +371,7 @@
 											</tr>
 											<tr>
 												<td class="checkout-image"><a href="javascript:;"><img
-														src="assets/pages/img/products/model3.jpg"
+														src="${pages}/img/products/model3.jpg"
 														alt="Berry Lace Dress"></a></td>
 												<td class="checkout-description">
 													<h3>
@@ -388,7 +388,7 @@
 											</tr>
 											<tr>
 												<td class="checkout-image"><a href="javascript:;"><img
-														src="assets/pages/img/products/model4.jpg"
+														src="${pages}/img/products/model4.jpg"
 														alt="Berry Lace Dress"></a></td>
 												<td class="checkout-description">
 													<h3>
