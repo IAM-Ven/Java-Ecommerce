@@ -91,12 +91,9 @@ public class PageController {
 		// send id to back-end directly
 		// This bottom code is returning a ClothesCategory products based on id
 		clthcat = storeCategoryDao.getStoreCategoryId(id);
-
 		mv.addObject("title", clthcat.getName() + " clothes");
 		mv.addObject("categories", storeCategoryDao.getStoreCategoryList());
-		
 		mv.addObject("category", clthcat);
-		
 		mv.addObject("cateProducts", storeProductDao.getListOfAllActiveProductsByCategory(id));
 		mv.addObject("onecatproductsactive", true);
 		return mv;
@@ -107,18 +104,26 @@ public class PageController {
 	@RequestMapping(value = { "/product/{id}" })
 	public ModelAndView singleProduct(@PathVariable("id") int id) {
 		StoreProduct product;
+		int category_id;
+		StoreCategory category;
 
 		ModelAndView mv = new ModelAndView("page");
 
 		product = storeProductDao.getStoreProduct(id);
+		category_id = product.getCategory_id();
+		category = storeCategoryDao.getStoreCategoryId(category_id);
 		product.setViews(product.getViews() + 1); 
-		// increament by 1 everytime someone sees it
+		
+		// Increment by 1 when someone sees it
 		// storeProductDao.updateProduct(product); // update the product after adding
 		// view # change
-
+		
+		System.out.println(product.getPrice());
+		
 		mv.addObject("title", product.getName());
 		mv.addObject("product", product);
-				
+		mv.addObject("category_id", category_id);
+		mv.addObject("category_name",category);
 		mv.addObject("productactive", true);
 		return mv;
 	}

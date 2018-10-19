@@ -15,10 +15,11 @@
 									class="btn btn-default fancybox-button">Zoom</a> <a
 									href="#product-pop-up"
 									class="btn btn-default fancybox-fast-view">View</a>
+								
 							</div>
 						</div>
 						<h3>
-							<a href="shop-item.html">${plr.getName()}</a>
+							<a href="${contextRoot}/javaecom/product/${plr.getId()}">${plr.getName()}</a>
 						</h3>
 						<div class="pi-price">$${String.format( "%.2f",
 						plr.getPrice())}</div>

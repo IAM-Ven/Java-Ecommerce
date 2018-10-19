@@ -2,7 +2,7 @@
 	<div class="container">
 		<ul class="breadcrumb">
 			<li><a href="${contextRoot}/javaecom/home">Home</a></li>
-			<li><a href="">Store</a></li>
+			<li><a href="${contextRoot}/javaecom/category/all/products">Store</a></li>
 			<li class="active">${category.getName()}</li>
 		</ul>
 		<!-- CONTENT -->
@@ -76,7 +76,7 @@
 									</div>
 								</div>
 								<h3>
-									<a href="shop-item.html">${product.getName()}</a>
+									<a href="${contextRoot}/javaecom/product/${product.getId()}">${product.getName()}</a>
 								</h3>
 								<div>
 									<span>By: ${product.getBrand()}</span>

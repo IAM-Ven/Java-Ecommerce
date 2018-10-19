@@ -3,6 +3,7 @@
 		<ul class="breadcrumb">
 			<li><a href="${contextRoot}/javaecom/home">Home</a></li>
 			<li><a href="${contextRoot}/javaecom/category/all/products">Store</a></li>
+			<li><a href="${contextRoot}/javaecom/category/${category_id}/products">${category_name.getName()}</a>
 			<li class="active">${product.getName()}</li>
 		</ul>
 		<!-- BEGIN CONTENT -->
@@ -43,10 +44,14 @@
 						<h1>${product.getName()}</h1>
 						<div class="price-availability-block clearfix">
 							<div class="price">
-								<strong><span>$</span>47.00</strong> 
-								<em>$<span>
-								$${String.format( "%.2f", smr.getPrice())}
-								</span></em>
+								
+								<strong><span></span>$${String.format( "%.2f", product.getPrice())}</strong> 
+								
+								<em><span>
+								$${String.format( "%.2f", product.getPrice())}
+								</span>
+								</em>
+								
 							</div>
 							<div class="availability">
 								Availability: <strong>In Stock</strong>
@@ -232,7 +237,7 @@
 	<!-- BEGIN SIMILAR PRODUCTS -->
 	<div class="row margin-bottom-40">
 		<div class="col-md-12 col-sm-12">
-			<h2>Most popular products</h2>
+			<h2>Similar Products</h2>
 			<div class="owl-carousel owl-carousel4">
 				<div>
 					<div class="product-item">
