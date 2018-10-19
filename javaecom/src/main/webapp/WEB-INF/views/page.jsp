@@ -61,6 +61,10 @@
 	<c:if test="${checkoutactive==true}">
 		<%@include file="./products/checkout.jsp"%>
 	</c:if>
+	
+	<c:if test="${cart==true}">
+		<%@include file="./products/cart.jsp" %>
+	</c:if>
 	<c:if
 		test="${allcatsproductsactive==true}">
 		<%@include file="./products/productslist.jsp"%>

@@ -71,7 +71,16 @@ public class PageController {
 		mv.addObject("checkoutactive", true);
 		return mv;
 	}
-
+	
+	@RequestMapping(value= {"/cart"})
+	public ModelAndView cart() {
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "Cart");
+		mv.addObject("categories", storeCategoryDao.getStoreCategoryList());
+		mv.addObject("cart", true);
+		return mv;
+	}
+	
 	/* load all products regardless of categories */
 	@RequestMapping(value = { "/category/all/products" })
 	public ModelAndView allProducts() {
