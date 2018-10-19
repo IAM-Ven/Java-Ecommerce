@@ -81,9 +81,6 @@
 	<!-- FOOTER -->
 	<%@include file="./shared/footer.jsp"%>
 
-	<!-- FAST VIEW PRODUCTS -->
-	<%@include file="fastview.jsp"%>
-
 	<!-- Load javascripts at bottom, this will reduce page load time -->
 	<%@include file="./shared/jsplugins.jsp"%>
 

@@ -8,20 +8,21 @@
 				<div>
 					<div class="product-item">
 						<div class="pi-img-wrapper">
-							<img src="${pages}/img/products/${plr.getImage() }.jpg"
+							<img src="${pages}/img/products/${plr.getImage()}.jpg"
 								class="img-responsive" alt="Berry Lace Dress">
+							
 							<div>
-								<a href="${pages}/img/products/${plr.getImage() }.jpg"
-									class="btn btn-default fancybox-button">Zoom</a> <a
-									href="#product-pop-up"
-									class="btn btn-default fancybox-fast-view">View</a>
-								
-							</div>
+							<a href="${pages}/img/products/${plr.getImage()}.jpg"
+								class="btn btn-default fancybox-button">Zoom</a> <a
+								href="${contextRoot}/javaecom/product/${plr.getId()}"
+								class="btn btn-default fancybox-fast-view">View</a>
+						</div>
+						
 						</div>
 						<h3>
 							<a href="${contextRoot}/javaecom/product/${plr.getId()}">${plr.getName()}</a>
 						</h3>
-						<div class="pi-price">$${String.format( "%.2f",
+						<div class="pi-price">$${String.format("%.2f",
 						plr.getPrice())}</div>
 						<a href="javascript:;" class="btn btn-default add2cart">Add to
 							cart</a>

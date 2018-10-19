@@ -68,12 +68,14 @@
 								<div class="pi-img-wrapper">
 									<img src="${pages}/img/products/${catpro.getImage()}.jpg"
 										class="img-responsive" alt="Berry Lace Dress">
+									
 									<div>
 										<a href="${pages}/img/products/${catpro.getImage()}.jpg"
-											class="btn btn-default fancybox-button">Zoom</a> <a
-											href="#product-pop-up"
-											class="btn btn-default fancybox-fast-view">View</a>
+										class="btn btn-default fancybox-button">Zoom</a> <a
+										href="${contextRoot}/javaecom/product/${catpro.getId()}"
+										class="btn btn-default fancybox-fast-view">View</a>
 									</div>
+						
 								</div>
 								<h3>
 									<a href="${contextRoot}/javaecom/product/${catpro.getId()}">${catpro.getName()}</a>

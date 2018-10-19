@@ -2,8 +2,7 @@
 	<div class="container">
 		<ul class="breadcrumb">
 			<li><a href="${contextRoot}/javaecom/home">Home</a></li>
-			<li><a href="${contextRoot}/javaecom/category/all/products">Store</a></li>
-			<li class="active">${category.getName()}</li>
+			<li class="active">Store</li>
 		</ul>
 		<!-- CONTENT -->
 		<div class="row margin-bottom-40">
@@ -16,7 +15,8 @@
 					</div>
 					<div class="col-md-10 col-sm-10">
 						<div class="pull-right">
-							<label class="control-label">Show:</label> <select
+							<label class="control-label">Show:</label> 
+							<select
 								class="form-control input-sm">
 								<option value="#?limit=24" selected="selected">24</option>
 								<option value="#?limit=25">25</option>
@@ -71,7 +71,7 @@
 									<div>
 										<a href="${pages}/img/products/${product.getImage()}.jpg"
 											class="btn btn-default fancybox-button">Zoom</a> <a
-											href="#product-pop-up"
+											href="${contextRoot}/javaecom/product/${product.getId()}"
 											class="btn btn-default fancybox-fast-view">View</a>
 									</div>
 								</div>

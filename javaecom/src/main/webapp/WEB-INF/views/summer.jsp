@@ -10,9 +10,9 @@
 						<img src="${pages}/img/products/${smr.getImage()}.jpg"
 							class="img-responsive" alt="${smr.getName()}">
 						<div>
-							<a href="${contextRoot}/javaecom/product/${smr.getId()}"
+							<a href="${pages}/img/products/${smr.getImage()}.jpg"
 								class="btn btn-default fancybox-button">Zoom</a> <a
-								href="smr"
+								href="${contextRoot}/javaecom/product/${smr.getId()}"
 								class="btn btn-default fancybox-fast-view">View</a>
 						</div>
 					</div>

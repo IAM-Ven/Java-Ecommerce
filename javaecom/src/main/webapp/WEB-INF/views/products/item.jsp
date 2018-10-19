@@ -12,7 +12,6 @@
 				<div class="row">
 					
 					
-					
 					<div class="col-md-6 col-sm-6">
 						<div class="product-main-image">
 							<img src="${pages}/img/products/${product.getImage()}.jpg"
@@ -45,10 +44,10 @@
 						<div class="price-availability-block clearfix">
 							<div class="price">
 								
-								<strong><span></span>$${String.format( "%.2f", product.getPrice())}</strong> 
+								<strong><span>$</span>${String.format( "%.2f", product.getPrice())}</strong> 
 								
-								<em><span>
-								$${String.format( "%.2f", product.getPrice())}
+								<em>$<span>
+								${String.format( "%.2f", product.getPrice())}
 								</span>
 								</em>
 								
@@ -247,7 +246,7 @@
 							<div>
 								<a href="${pages}/img/products/${product.getImage()}.jpg"
 									class="btn btn-default fancybox-button">Zoom</a> <a
-									href="#product-pop-up"
+									href="${contextRoot}/javaecom/product/${product.getId()}"
 									class="btn btn-default fancybox-fast-view">View</a>
 							</div>
 						</div>
@@ -268,7 +267,7 @@
 							<div>
 								<a href="${pages}/img/products/${product.getImage()}.jpg"
 									class="btn btn-default fancybox-button">Zoom</a> <a
-									href="#product-pop-up"
+									href="${contextRoot}/javaecom/product/${product.getId()}"
 									class="btn btn-default fancybox-fast-view">View</a>
 							</div>
 						</div>
@@ -288,7 +287,7 @@
 							<div>
 								<a href="${pages}/img/products/${product.getImage()}.jpg"
 									class="btn btn-default fancybox-button">Zoom</a> <a
-									href="#product-pop-up"
+									href="${contextRoot}/javaecom/product/${product.getId()}"
 									class="btn btn-default fancybox-fast-view">View</a>
 							</div>
 						</div>
@@ -308,7 +307,7 @@
 							<div>
 								<a href="${pages}/img/products/${product.getImage()}.jpg"
 									class="btn btn-default fancybox-button">Zoom</a> <a
-									href="#product-pop-up"
+									href="${contextRoot}/javaecom/product/${product.getId()}"
 									class="btn btn-default fancybox-fast-view">View</a>
 							</div>
 						</div>
@@ -329,7 +328,7 @@
 							<div>
 								<a href="${pages}/img/products/${product.getImage()}.jpg"
 									class="btn btn-default fancybox-button">Zoom</a> <a
-									href="#product-pop-up"
+									href="${contextRoot}/javaecom/product/${product.getId()}"
 									class="btn btn-default fancybox-fast-view">View</a>
 							</div>
 						</div>
@@ -349,7 +348,7 @@
 							<div>
 								<a href="${pages}/img/products/${product.getImage()}.jpg"
 									class="btn btn-default fancybox-button">Zoom</a> <a
-									href="#product-pop-up"
+									href="${contextRoot}/javaecom/product/${product.getId()}"
 									class="btn btn-default fancybox-fast-view">View</a>
 							</div>
 						</div>

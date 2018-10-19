@@ -117,9 +117,7 @@ public class PageController {
 		// Increment by 1 when someone sees it
 		// storeProductDao.updateProduct(product); // update the product after adding
 		// view # change
-		
-		System.out.println(product.getPrice());
-		
+				
 		mv.addObject("title", product.getName());
 		mv.addObject("product", product);
 		mv.addObject("category_id", category_id);
