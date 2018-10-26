@@ -1,10 +1,13 @@
 <div class="main">
 	<div class="container">
+
 		<ul class="breadcrumb">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="">Store</a></li>
+			<li><a href="${contextRoot}/javaecom/home">Home</a></li>
+			<li><a href="${contextRoot}/javaecom/category/all/products">Store</a></li>
+			<li><a href="${contextRoot}/javaecom/cart">Cart</a></li>
 			<li class="active">Checkout</li>
 		</ul>
+
 		<!-- BEGIN SIDEBAR & CONTENT -->
 		<div class="row margin-bottom-40">
 			<!-- BEGIN CONTENT -->

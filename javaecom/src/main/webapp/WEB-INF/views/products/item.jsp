@@ -3,22 +3,25 @@
 		<ul class="breadcrumb">
 			<li><a href="${contextRoot}/javaecom/home">Home</a></li>
 			<li><a href="${contextRoot}/javaecom/category/all/products">Store</a></li>
-			<li><a href="${contextRoot}/javaecom/category/${category_id}/products">${category_name.getName()}</a>
+			<li><a
+				href="${contextRoot}/javaecom/category/${category_id}/products">${category_name.getName()}</a>
 			<li class="active">${product.getName()}</li>
 		</ul>
 		<!-- BEGIN CONTENT -->
 		<div class="col-md-9 col-sm-7">
 			<div class="product-page">
 				<div class="row">
-					
-					
+
+
 					<div class="col-md-6 col-sm-6">
 						<div class="product-main-image">
 							<img src="${pages}/img/products/${product.getImage()}.jpg"
 								alt="${product.getName()}" class="img-responsive"
 								data-BigImgsrc="${pages}/img/products/${product.getImage()}.jpg">
 						</div>
-						
+
+						<!-- SUBIMAGES -->
+
 						<div class="product-other-images">
 							<a href="${pages}/img/products/${product.getImage()}.jpg"
 								class="fancybox-button" rel="photos-lib"><img
@@ -34,23 +37,22 @@
 								src="${pages}/img/products/${product.getImage()}.jpg"></a>
 						</div>
 					</div>
-					
-					
-					
-					
-					
+
+
+
+
+
 					<div class="col-md-6 col-sm-6">
 						<h1>${product.getName()}</h1>
 						<div class="price-availability-block clearfix">
 							<div class="price">
-								
-								<strong><span>$</span>${String.format( "%.2f", product.getPrice())}</strong> 
-								
-								<em>$<span>
-								${String.format( "%.2f", product.getPrice())}
+
+								<strong><span>$</span>${String.format( "%.2f", product.getPrice())}</strong>
+
+								<em>$<span> ${String.format( "%.2f", product.getPrice())}
 								</span>
 								</em>
-								
+
 							</div>
 							<div class="availability">
 								Availability: <strong>In Stock</strong>
@@ -77,7 +79,7 @@
 								</select>
 							</div>
 						</div>
-						
+
 						<div class="product-page-cart">
 							<div class="product-quantity">
 								<input id="product-quantity" type="text" value="1" readonly
@@ -86,13 +88,8 @@
 							<button class="btn btn-primary" type="submit">Add to
 								cart</button>
 						</div>
-						
-						
-						
-						
-						
-						
-						
+
+
 						<div class="review">
 							<input type="range" value="4" step="0.25" id="backing4">
 							<div class="rateit" data-rateit-backingfld="#backing4"
@@ -119,9 +116,11 @@
 						<ul id="myTab" class="nav nav-tabs">
 							<li><a href="#Description" data-toggle="tab">Description</a></li>
 							<li><a href="#Information" data-toggle="tab">Information</a></li>
-							<li class="active"><a href="#Reviews" data-toggle="tab">Reviews
-									(2)</a></li>
+							<li class="active"><a href="#Reviews" data-toggle="tab">Reviews(2)</a></li>
 						</ul>
+
+						<!-- |||||||||||||||||||||||||||||||||DESCRIPTIONS||||||||||||||||||||||||||||||| -->
+
 						<div id="myTabContent" class="tab-content">
 							<div class="tab-pane fade" id="Description">
 								<p>Lorem ipsum dolor ut sit ame dolore adipiscing elit, sed
@@ -134,6 +133,11 @@
 									magna aliquarm erat sit volutpat Nostrud duis molestie at
 									dolore.</p>
 							</div>
+
+
+							<!-- ||||||||||||||||||||||||||||||||INFORMATION|||||||||||||||||||||||||||| -->
+
+
 							<div class="tab-pane fade" id="Information">
 								<table class="datasheet">
 									<tr>
@@ -161,6 +165,9 @@
 									</tr>
 								</table>
 							</div>
+
+							<!-- |||||||||||||||||||||||||||||||||||REVIEWS|||||||||||||||||||||||||||||||||| -->
+
 							<div class="tab-pane fade in active" id="Reviews">
 								<!--<p>There are no reviews for this product.</p>-->
 								<div class="review-item clearfix">
@@ -238,128 +245,29 @@
 		<div class="col-md-12 col-sm-12">
 			<h2>Similar Products</h2>
 			<div class="owl-carousel owl-carousel4">
-				<div>
-					<div class="product-item">
-						<div class="pi-img-wrapper">
-							<img src="${pages}/img/products/${product.getImage()}.jpg"
-								class="img-responsive" alt="Berry Lace Dress">
-							<div>
-								<a href="${pages}/img/products/${product.getImage()}.jpg"
-									class="btn btn-default fancybox-button">Zoom</a> <a
-									href="${contextRoot}/javaecom/product/${product.getId()}"
-									class="btn btn-default fancybox-fast-view">View</a>
+				<c:forEach items="${similar_products}" var="product">
+					<div>
+						<div class="product-item">
+							<div class="pi-img-wrapper">
+								<img src="${pages}/img/products/${product.getImage()}.jpg"
+									class="img-responsive" alt="Berry Lace Dress">
+								<div>
+									<a href="${pages}/img/products/${product.getImage()}.jpg"
+										class="btn btn-default fancybox-button">Zoom</a> <a
+										href="${contextRoot}/javaecom/product/${product.getId()}"
+										class="btn btn-default fancybox-fast-view">View</a>
+								</div>
 							</div>
+							<h3>
+								<a href="shop-item.html">${product.getName()}</a>
+							</h3>
+							<div class="pi-price">$${String.format("%.2f",
+								product.getPrice())}</div>
+							<a href="javascript:;" class="btn btn-default add2cart">Add
+								to cart</a>
 						</div>
-						<h3>
-							<a href="shop-item.html">Berry Lace Dress</a>
-						</h3>
-						<div class="pi-price">$29.00</div>
-						<a href="javascript:;" class="btn btn-default add2cart">Add to
-							cart</a>
-						<div class="sticker sticker-new"></div>
 					</div>
-				</div>
-				<div>
-					<div class="product-item">
-						<div class="pi-img-wrapper">
-							<img src="${pages}/img/products/${product.getImage()}.jpg"
-								class="img-responsive" alt="Berry Lace Dress">
-							<div>
-								<a href="${pages}/img/products/${product.getImage()}.jpg"
-									class="btn btn-default fancybox-button">Zoom</a> <a
-									href="${contextRoot}/javaecom/product/${product.getId()}"
-									class="btn btn-default fancybox-fast-view">View</a>
-							</div>
-						</div>
-						<h3>
-							<a href="shop-item.html">Berry Lace Dress2</a>
-						</h3>
-						<div class="pi-price">$29.00</div>
-						<a href="javascript:;" class="btn btn-default add2cart">Add to
-							cart</a>
-					</div>
-				</div>
-				<div>
-					<div class="product-item">
-						<div class="pi-img-wrapper">
-							<img src="${pages}/img/products/${product.getImage()}.jpg"
-								class="img-responsive" alt="Berry Lace Dress">
-							<div>
-								<a href="${pages}/img/products/${product.getImage()}.jpg"
-									class="btn btn-default fancybox-button">Zoom</a> <a
-									href="${contextRoot}/javaecom/product/${product.getId()}"
-									class="btn btn-default fancybox-fast-view">View</a>
-							</div>
-						</div>
-						<h3>
-							<a href="shop-item.html">Berry Lace Dress3</a>
-						</h3>
-						<div class="pi-price">$29.00</div>
-						<a href="javascript:;" class="btn btn-default add2cart">Add to
-							cart</a>
-					</div>
-				</div>
-				<div>
-					<div class="product-item">
-						<div class="pi-img-wrapper">
-							<img src="${pages}/img/products/${product.getImage()}.jpg"
-								class="img-responsive" alt="Berry Lace Dress">
-							<div>
-								<a href="${pages}/img/products/${product.getImage()}.jpg"
-									class="btn btn-default fancybox-button">Zoom</a> <a
-									href="${contextRoot}/javaecom/product/${product.getId()}"
-									class="btn btn-default fancybox-fast-view">View</a>
-							</div>
-						</div>
-						<h3>
-							<a href="shop-item.html">Berry Lace Dress4</a>
-						</h3>
-						<div class="pi-price">$29.00</div>
-						<a href="javascript:;" class="btn btn-default add2cart">Add to
-							cart</a>
-						<div class="sticker sticker-sale"></div>
-					</div>
-				</div>
-				<div>
-					<div class="product-item">
-						<div class="pi-img-wrapper">
-							<img src="${pages}/img/products/${product.getImage()}.jpg"
-								class="img-responsive" alt="Berry Lace Dress">
-							<div>
-								<a href="${pages}/img/products/${product.getImage()}.jpg"
-									class="btn btn-default fancybox-button">Zoom</a> <a
-									href="${contextRoot}/javaecom/product/${product.getId()}"
-									class="btn btn-default fancybox-fast-view">View</a>
-							</div>
-						</div>
-						<h3>
-							<a href="shop-item.html">Berry Lace Dress5</a>
-						</h3>
-						<div class="pi-price">$29.00</div>
-						<a href="javascript:;" class="btn btn-default add2cart">Add to
-							cart</a>
-					</div>
-				</div>
-				<div>
-					<div class="product-item">
-						<div class="pi-img-wrapper">
-							<img src="${pages}/img/products/${product.getImage()}.jpg"
-								class="img-responsive" alt="Berry Lace Dress">
-							<div>
-								<a href="${pages}/img/products/${product.getImage()}.jpg"
-									class="btn btn-default fancybox-button">Zoom</a> <a
-									href="${contextRoot}/javaecom/product/${product.getId()}"
-									class="btn btn-default fancybox-fast-view">View</a>
-							</div>
-						</div>
-						<h3>
-							<a href="shop-item.html">Berry Lace Dress6</a>
-						</h3>
-						<div class="pi-price">$29.00</div>
-						<a href="javascript:;" class="btn btn-default add2cart">Add to
-							cart</a>
-					</div>
-				</div>
+				</c:forEach>
 			</div>
 		</div>
 	</div>

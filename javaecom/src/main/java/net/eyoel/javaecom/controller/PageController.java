@@ -1,5 +1,7 @@
 package net.eyoel.javaecom.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,10 +36,10 @@ public class PageController {
 
 		// Popular
 		mv.addObject("popular", storeProductDao.getListOfPopularActiveProducts(10));
-		
+
 		// Get the product in the home page as well
-		
-		//mv.addObject("product", storeProductDao.get)
+
+		// mv.addObject("product", storeProductDao.get)
 		// Home page is active
 		mv.addObject("homeactive", true);
 
@@ -71,8 +73,8 @@ public class PageController {
 		mv.addObject("checkoutactive", true);
 		return mv;
 	}
-	
-	@RequestMapping(value= {"/cart"})
+
+	@RequestMapping(value = { "/cart" })
 	public ModelAndView cart() {
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "Cart");
@@ -80,7 +82,7 @@ public class PageController {
 		mv.addObject("cart", true);
 		return mv;
 	}
-	
+
 	/* load all products regardless of categories */
 	@RequestMapping(value = { "/category/all/products" })
 	public ModelAndView allProducts() {
@@ -113,25 +115,28 @@ public class PageController {
 	@RequestMapping(value = { "/product/{id}" })
 	public ModelAndView singleProduct(@PathVariable("id") int id) {
 		StoreProduct product;
-		int category_id;
 		StoreCategory category;
+		List<StoreProduct> similarProducts;
+		int category_id;
 
 		ModelAndView mv = new ModelAndView("page");
 
 		product = storeProductDao.getStoreProduct(id);
 		category_id = product.getCategory_id();
+		similarProducts = storeProductDao.getListOfAllActiveProductsByCategory(category_id);
 		category = storeCategoryDao.getStoreCategoryId(category_id);
-		product.setViews(product.getViews() + 1); 
-		
-		// Increment by 1 when someone sees it
-		// storeProductDao.updateProduct(product); // update the product after adding
-		// view # change
-				
+
+		// increment views
+		product.setViews(product.getViews() + 1);
+
 		mv.addObject("title", product.getName());
 		mv.addObject("product", product);
+		mv.addObject("similar_products", similarProducts);
+		mv.addObject("categories", storeCategoryDao.getStoreCategoryList());
 		mv.addObject("category_id", category_id);
-		mv.addObject("category_name",category);
+		mv.addObject("category_name", category);
 		mv.addObject("productactive", true);
+		
 		return mv;
 	}
 
