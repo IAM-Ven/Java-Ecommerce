@@ -23,18 +23,25 @@
 						<!-- SUBIMAGES -->
 
 						<div class="product-other-images">
-							<a href="${pages}/img/products/${product.getImage()}.jpg"
+
+							<a href="${pages}/img/products/${subimage.getImage1()}.jpg"
 								class="fancybox-button" rel="photos-lib"><img
 								alt="Berry Lace Dress"
-								src="${pages}/img/products/${product.getImage()}.jpg"></a> <a
-								href="${pages}/img/products/${product.getImage()}.jpg"
+								src="${pages}/img/products/${subimage.getImage1()}.jpg"></a> <a
+								href="${pages}/img/products/${subimage.getImage2()}.jpg"
 								class="fancybox-button" rel="photos-lib"><img
 								alt="Berry Lace Dress"
-								src="${pages}/img/products/${product.getImage()}.jpg"></a> <a
-								href="${pages}/img/products/${product.getImage()}.jpg"
+								src="${pages}/img/products/${subimage.getImage2()}.jpg"></a> <a
+								href="${pages}/img/products/${subimage.getImage3()}.jpg"
 								class="fancybox-button" rel="photos-lib"><img
 								alt="Berry Lace Dress"
-								src="${pages}/img/products/${product.getImage()}.jpg"></a>
+								src="${pages}/img/products/${subimage.getImage3()}.jpg"> </a>
+
+							<a href="${pages}/img/products/${subimage.getImage4()}.jpg"
+								class="fancybox-button" rel="photos-lib"><img
+								alt="Berry Lace Dress"
+								src="${pages}/img/products/${subimage.getImage4()}.jpg"> </a>
+
 						</div>
 					</div>
 
@@ -259,7 +266,7 @@
 								</div>
 							</div>
 							<h3>
-								<a href="shop-item.html">${product.getName()}</a>
+								<a href="${contextRoot}/javaecom/product/${product.getId()}">${product.getName()}</a>
 							</h3>
 							<div class="pi-price">$${String.format("%.2f",
 								product.getPrice())}</div>

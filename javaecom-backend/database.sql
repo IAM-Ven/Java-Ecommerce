@@ -137,4 +137,73 @@ INSERT INTO StoreProduct (code, name, image, brand, info, price, quantity, summe
 VALUES ('BNCVFRTSWQD', 'Best Summer Cloth 2012', 'k4', 'DVM', 'These lightweight microfiber towels are an affordable option for all purpose wiping, cleaning and dusting. They can be laundered and reused many times. There are various color options for color coding cleaning tasks. These lightweight low pile microfiber towels work especially well on glass.
 ', 87, 65, true,false,true,1, 2 );
 
+CREATE TABLE StoreSubimage(
+              id IDENTITY,
+              image1 VARCHAR(25),
+              image2 VARCHAR(25),
+              image3 VARCHAR(25),
+              image4 VARCHAR(25),
+              product_id INT,
+              
+              CONSTRAINT subimage_id PRIMARY KEY (id),
+              CONSTRAINT subimage_product_id FOREIGN KEY (product_id) REFERENCES StoreProduct(id),
+);
+
+INSERT INTO StoreSubimage
+(image1, image2, image3, image4, product_id) 
+VALUES ('p4', 'p5', 'model1', 'model2', 1);
+INSERT INTO StoreSubimage
+(image1, image2, image3, image4, product_id) 
+VALUES ('p4', 'p5', 'model1', 'model2', 2);
+INSERT INTO StoreSubimage
+(image1, image2, image3, image4, product_id) 
+VALUES ('p4', 'p5', 'model1', 'model2', 3);
+INSERT INTO StoreSubimage
+(image1, image2, image3, image4, product_id) 
+VALUES ('p4', 'p5', 'model1', 'model2',4);
+INSERT INTO StoreSubimage
+(image1, image2, image3, image4, product_id) 
+VALUES ('p4', 'p5', 'model1', 'model2',5);
+INSERT INTO StoreSubimage
+(image1, image2, image3, image4, product_id) 
+VALUES ('p4', 'p5', 'model1', 'model2',6);
+INSERT INTO StoreSubimage
+(image1, image2, image3, image4, product_id) 
+VALUES ('p4', 'p5', 'model1', 'model2',7);
+INSERT INTO StoreSubimage
+(image1, image2, image3, image4, product_id) 
+VALUES ('p4', 'p5', 'model1', 'model2',8);
+INSERT INTO StoreSubimage
+(image1, image2, image3, image4, product_id) 
+VALUES ('p4', 'p5', 'model1', 'model2',9);
+INSERT INTO StoreSubimage
+(image1, image2, image3, image4, product_id) 
+VALUES ('p4', 'p5', 'model1', 'model2',10);
+INSERT INTO StoreSubimage
+(image1, image2, image3, image4, product_id) 
+VALUES ('p4', 'p5', 'model1', 'model2',11);
+INSERT INTO StoreSubimage
+(image1, image2, image3, image4, product_id) 
+VALUES ('p4', 'p5', 'model1', 'model2',12);
+INSERT INTO StoreSubimage
+(image1, image2, image3, image4, product_id) 
+VALUES ('p4', 'p5', 'model1', 'model2',13);
+INSERT INTO StoreSubimage
+(image1, image2, image3, image4, product_id) 
+VALUES ('p4', 'p5', 'model1', 'model2',14);
+INSERT INTO StoreSubimage
+(image1, image2, image3, image4, product_id) 
+VALUES ('p4', 'p5', 'model1', 'model2',15);
+INSERT INTO StoreSubimage
+(image1, image2, image3, image4, product_id) 
+VALUES ('p4', 'p5', 'model1', 'model2',16);
+INSERT INTO StoreSubimage
+(image1, image2, image3, image4, product_id) 
+VALUES ('p4', 'p5', 'model1', 'model2',17);
+INSERT INTO StoreSubimage
+(image1, image2, image3, image4, product_id) 
+VALUES ('p4', 'p5', 'model1', 'model2',18);
+INSERT INTO StoreSubimage
+(image1, image2, image3, image4, product_id) 
+VALUES ('p4', 'p5', 'model1', 'model2',19);
 
