@@ -122,8 +122,9 @@
 					<div class="product-page-content">
 						<ul id="myTab" class="nav nav-tabs">
 							<li><a href="#Description" data-toggle="tab">Description</a></li>
-							<li><a href="#Information" data-toggle="tab">Information</a></li>
-							<li class="active"><a href="#Reviews" data-toggle="tab">Reviews(2)</a></li>
+							<!-- 							<li><a href="#Information" data-toggle="tab">Information</a></li>
+ -->
+							<li class="active"><a href="#Reviews" data-toggle="tab">Reviews(${reviews.size()})</a></li>
 						</ul>
 
 						<!-- |||||||||||||||||||||||||||||||||DESCRIPTIONS||||||||||||||||||||||||||||||| -->
@@ -144,7 +145,7 @@
 
 							<!-- ||||||||||||||||||||||||||||||||INFORMATION|||||||||||||||||||||||||||| -->
 
-
+							<!-- 
 							<div class="tab-pane fade" id="Information">
 								<table class="datasheet">
 									<tr>
@@ -171,44 +172,27 @@
 										<td>plastic</td>
 									</tr>
 								</table>
-							</div>
+							</div> -->
 
 							<!-- |||||||||||||||||||||||||||||||||||REVIEWS|||||||||||||||||||||||||||||||||| -->
 
 							<div class="tab-pane fade in active" id="Reviews">
 								<!--<p>There are no reviews for this product.</p>-->
-								<div class="review-item clearfix">
-									<div class="review-item-submitted">
-										<strong>Bob</strong> <em>30/12/2013 - 07:37</em>
-										<div class="rateit" data-rateit-value="5"
-											data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+								<c:forEach items="${reviews}" var="review">
+									<div class="review-item clearfix">
+										<div class="review-item-submitted">
+											<strong>Mary</strong> <em>${review.getDate() }</em>
+											<div class="rateit" data-rateit-value="${review.getVote()}"
+												data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+										</div>
+										<div class="review-item-content">
+											<p>${review.getInfo()}</p>
+										</div>
 									</div>
-									<div class="review-item-content">
-										<p>Sed velit quam, auctor id semper a, hendrerit eget
-											justo. Cum sociis natoque penatibus et magnis dis parturient
-											montes, nascetur ridiculus mus. Duis vel arcu pulvinar dolor
-											tempus feugiat id in orci. Phasellus sed erat leo. Donec
-											luctus, justo eget ultricies tristique, enim mauris bibendum
-											orci, a sodales lectus purus ut lorem.</p>
-									</div>
-								</div>
-								<div class="review-item clearfix">
-									<div class="review-item-submitted">
-										<strong>Mary</strong> <em>13/12/2013 - 17:49</em>
-										<div class="rateit" data-rateit-value="2.5"
-											data-rateit-ispreset="true" data-rateit-readonly="true"></div>
-									</div>
-									<div class="review-item-content">
-										<p>Sed velit quam, auctor id semper a, hendrerit eget
-											justo. Cum sociis natoque penatibus et magnis dis parturient
-											montes, nascetur ridiculus mus. Duis vel arcu pulvinar dolor
-											tempus feugiat id in orci. Phasellus sed erat leo. Donec
-											luctus, justo eget ultricies tristique, enim mauris bibendum
-											orci, a sodales lectus purus ut lorem.</p>
-									</div>
-								</div>
+								</c:forEach>
 
-								<!-- BEGIN FORM-->
+
+								<!------------------------------- BEGIN FORM--------------------------------->
 								<form action="#" class="reviews-form" role="form">
 									<h2>Write a review</h2>
 									<div class="form-group">

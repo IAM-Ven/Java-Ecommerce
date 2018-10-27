@@ -20,6 +20,8 @@ public class PageController {
 	private StoreProductDao storeProductDao = null;
 	@Autowired
 	private StoreSubimageDao storeSubimageDao = null;
+	@Autowired
+	private StoreReviewDao storeReviewDao = null;
 
 	@RequestMapping(value = { "/", "/home" })
 	public ModelAndView index() {
@@ -119,7 +121,9 @@ public class PageController {
 		StoreProduct product;
 		StoreCategory category;
 		StoreSubimage subimage;
+		
 		List<StoreProduct> similarProducts;
+		List<StoreReview> reviews;
 		int category_id;
 
 		ModelAndView mv = new ModelAndView("page");
@@ -129,7 +133,8 @@ public class PageController {
 		category_id = product.getCategory_id();
 		similarProducts = storeProductDao.getListOfAllActiveProductsByCategory(category_id);
 		category = storeCategoryDao.getStoreCategoryId(category_id);
-
+		reviews = storeReviewDao.getStoreReview(product.getId());
+		
 		// increment views
 		product.setViews(product.getViews() + 1);
 
@@ -140,10 +145,10 @@ public class PageController {
 		mv.addObject("category_id", category_id);
 		mv.addObject("category_name", category);
 		mv.addObject("subimage", subimage);
+		mv.addObject("reviews", reviews);
 		mv.addObject("productactive", true);
 		
-		System.out.println(subimage.getImage1());
-		
+		System.out.println(reviews.size());
 		return mv;
 	}
 
